@@ -1,12 +1,12 @@
 {
-    "name": "cesium-heatmap-es6",
+    "name": "cqdlzx-cesium-heatmap",
     "main": "dist/cesium-heatmap-es6.umd.js",
     "module": "dist/index.js",
     "typings": "lib/index.d.ts",
     "version": "0.8.0",
     "private": false,
     "dependencies": {
-        "cesium": "^1.102.0"
+        "cesium": "^1.113.0"
     },
     "files": [
         "dist",
@@ -19,10 +19,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/cesium-plugin/cesium-heatmap-es6.git"
+        "url": "git+https://github.com/tjdbcwq/cqdlzx-cesium-heatmap.git"
     },
     "bugs": {
-        "url": "https://github.com/cesium-plugin/cesium-heatmap-es6/issues"
+        "url": "https://github.com/tjdbcwq/cqdlzx-cesium-heatmap/issues"
     },
     "scripts": {
         "test": "react-scripts test",
