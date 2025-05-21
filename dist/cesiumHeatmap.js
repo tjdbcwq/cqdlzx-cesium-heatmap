@@ -86,7 +86,7 @@ export class CesiumHeatmap {
             if ((_c = _options) === null || _c === void 0 ? void 0 : _c.radius) {
                 this.initRadius = _options.radius;
             }
-            _options = Object.assign({}, _options);
+            this.heatmapOptions = Object.assign({}, _options);
             const options = Object.assign(Object.assign({}, _options), { container });
             this.heatmap = h337.create(options);
             this.heatmap.setData(data);
