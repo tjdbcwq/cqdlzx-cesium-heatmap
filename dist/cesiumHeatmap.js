@@ -83,10 +83,10 @@ export class CesiumHeatmap {
             const _options = this.initOptions.heatmapOptions
                 ? Object.assign(Object.assign({}, defaultOptions), this.initOptions.heatmapOptions) : defaultOptions;
             //初始化半径
-            if ((_c = this.heatmapOptions) === null || _c === void 0 ? void 0 : _c.radius) {
-                this.initRadius = this.heatmapOptions.radius;
+            if ((_c = _options) === null || _c === void 0 ? void 0 : _c.radius) {
+                this.initRadius = _options.radius;
             }
-            this.heatmapOptions = Object.assign({}, _options);
+            _options = Object.assign({}, _options);
             const options = Object.assign(Object.assign({}, _options), { container });
             this.heatmap = h337.create(options);
             this.heatmap.setData(data);
