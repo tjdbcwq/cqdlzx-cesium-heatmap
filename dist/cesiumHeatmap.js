@@ -254,7 +254,7 @@ export class CesiumHeatmap {
      */
     addLisener() {
         const maxRadius = 100;
-        const min = 5000;
+        const min = 6375000;
         const max = 10000000;
         this.cameraMoveEnd = () => {
             var _a;
