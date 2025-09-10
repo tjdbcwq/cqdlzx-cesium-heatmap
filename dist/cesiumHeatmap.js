@@ -219,13 +219,6 @@ export class CesiumHeatmap {
             url: url,
             rectangle: Rectangle.fromDegrees(...this.bounds),
         }));
-
-        this.viewer.camera.changed.addEventListener(() => {
-            const height = this.viewer.camera.positionCartographic.height;
-            if(this.provider) {
-                this.provider.show = (height > this.minDistance && height < this.maxDistance);
-            }
-        });
     }
     getImageMaterialProperty() {
         const url = this.heatmap.getDataURL();
@@ -241,7 +234,12 @@ export class CesiumHeatmap {
                 coordinates: Rectangle.fromDegrees(...this.bounds),
                 material: this.getImageMaterialProperty(),
             },
-            distanceDisplayCondition: new Cesium.DistanceDisplayCondition(0, 5000000)
+        });
+        this.viewer.camera.changed.addEventListener(() => {
+            const height = this.viewer.camera.positionCartographic.height;
+            if(this.provider) {
+                this.provider.show = (height > this.minDistance && height < this.maxDistance);
+            }
         });
     }
     updateLayer() {
