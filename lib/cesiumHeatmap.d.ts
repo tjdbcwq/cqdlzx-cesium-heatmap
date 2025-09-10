@@ -91,9 +91,12 @@ export declare class CesiumHeatmap {
     private provider?;
     private heatmap?;
     private cameraMoveEnd?;
+    private minDistance?;
+    private maxDistance?;
     private bounds;
     private lastCameraHeight;
     private initRadius;
+
     constructor(viewer: Viewer, options: CesiumHeatmapOption);
     /**
      * 设置数据的最大最小值
